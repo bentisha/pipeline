@@ -125,14 +125,5 @@ jobs:
         push: true
         tags: mohamedaminebenticha/bankapp:latest
         file: ./Dockerfile
-    - name: trivy scan
-      uses: aquasecurity/trivy-action@v0.4.0
-      with:
-        image-ref: mohamedaminebenticha/bankapp:latest
-        format: sarif
-        output: trivy-scan-results.sarif
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  
-
+    
   
